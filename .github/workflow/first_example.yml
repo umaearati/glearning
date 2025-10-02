@@ -1,16 +1,19 @@
 name: My First Workflow
 
-on: push
+on:
+  push:
+    branches: ["main"]
 
 jobs:
   first_job:
-    runs-on: mac
+    runs-on: macos-latest
+
     steps:
       - name: welcome message
-      - run: echo "my first github action job"
+        run: echo "my first github action job"
 
       - name: list files
-      - run: ls
+        run: ls
 
       - name: read files
-      - run: cat README.md
+        run: cat README.md
